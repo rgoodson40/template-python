@@ -1,1 +1,1 @@
-This is a template to create a Rails w/ MySQL Repo
+This is a template to create a Python app
