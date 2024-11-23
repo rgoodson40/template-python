@@ -1,0 +1,35 @@
+name: "template-rails-mysql-compose-stack"
+
+services:
+
+  app:
+    build:
+      context: ..
+      dockerfile: .devcontainer/Dockerfile
+      target: develop
+    command: tail -f /dev/null
+    links:
+      - db
+    depends_on:
+      - db
+    environment:
+      MYSQL_USERNAME: root
+      MYSQL_PASSWORD: password
+      MYSQL_HOST: db
+      MYSQL_PORT: 3306
+      MYSQL_DB: blogapp
+    networks:
+      - custom_network
+
+  db:
+    image: mysql:8.3.0
+    command: --default-authentication-plugin=mysql_native_password
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+    networks:
+      - custom_network
+
+networks:
+  custom_network:
+    driver: bridge
