@@ -1,5 +1,5 @@
 {
-    "name": "template-rails-mysql",
+    "name": "template-python",
     "dockerComposeFile": ["docker-compose.yml"],
     "service": "app",
     "workspaceFolder": "/workspace"
