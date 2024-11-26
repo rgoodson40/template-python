@@ -1,5 +1,6 @@
 {
     "name": "template-python",
     "dockerComposeFile": ["docker-compose.yml"],
-    "service": "app"
+    "service": "app",
+    "postCreateCommand": "sudo chown -R vscode:vscode /workspaces"
 }
