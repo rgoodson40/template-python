@@ -1,7 +1,7 @@
 # Stage 1: builder (base image that can be used for local development or for deployments)
 FROM mcr.microsoft.com/devcontainers/python:1-3.12-bullseye AS builder
-RUN mkdir /workspace
-WORKDIR /workspace
+# RUN mkdir /workspace
+WORKDIR /workspaces
 RUN apt-get update -qq
 
 # Stage 2: develop (for local development setup)
