@@ -7,7 +7,7 @@ services:
       context: ..
       dockerfile: .devcontainer/Dockerfile
       target: develop
-    command: tail -f /dev/null
+    #command: tail -f /dev/null
     networks:
       - custom_network
 
