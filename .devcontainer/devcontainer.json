@@ -1,6 +1,6 @@
 {
     "name": "template-python",
     "dockerComposeFile": ["docker-compose.yml"],
-    "service": "app",
-    "workspaceFolder": "/workspace"
+    "service": "app"
+    //"workspaceFolder": "/workspace"
 }
